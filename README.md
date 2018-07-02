@@ -10,5 +10,5 @@ Then our package can be installed from GitHub
 > devtools::install_github("AlekseyBuzmakov/XARF") 
 
 ### Usage
-For the moment only function `{r}write.xarf` is provided. See help of R.
+For the moment only function `write.xarf` is provided. See help of R.
 
