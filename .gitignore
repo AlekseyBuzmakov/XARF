@@ -2,3 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
+
+# Some temporary files of viewers
+*~
