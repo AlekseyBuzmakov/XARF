@@ -8,14 +8,14 @@
 #' inferType(1:10)
 inferType = function(x) {
   if( is.factor(x) && is.ordered(x) ) {
-    return(paste0("[",paste0('"',levels(x),'"',collapse = ", "),"]"))
+    return(paste0("[",paste0('"',levels(x),'"',collapse = ","),"]"))
   }
   if( is.factor(x) || is.character(x) ) {
     # A magic constant that makes the file readable by human
     if( length(unique(x)) > 20 ) {
       return(is.factor(x) ? "categoric" : "string")
     } else {
-      return(paste0("{",paste0('"',unique(x),'"',collapse = ", "),"}"))
+      return(paste0("{",paste0('"',unique(x),'"',collapse = ","),"}"))
     }
   }
   if(is.integer(x)) {
