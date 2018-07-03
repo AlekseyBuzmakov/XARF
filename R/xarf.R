@@ -128,7 +128,7 @@ write.xarf <- function(x, dbID, file="", dbDescription=NULL, attrDescription=NUL
   }
   # Processing unknown attributes
   for(i in which(!describedAttributes)){
-    cat("@attribute", names(x)[i], inferType(x[[attr$id]]), "\n", file = file)
+    cat("@attribute", names(x)[i], inferType(x[[i]]), "\n", file = file)
     x.towrite=cbind(x.towrite,x[[i]])
   }
   cat("@data\n", file = file)
